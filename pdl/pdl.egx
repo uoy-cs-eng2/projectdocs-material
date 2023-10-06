@@ -24,6 +24,14 @@ rule WP2Page
     target: "../mkdocs/docs/wp/" + wp.getIndex() + "/index.md"
 }
 
+rule Task2Page
+    transform task : Task {
+
+    template: "templates/task.egl"
+    
+    target: "../mkdocs/docs/wp/" + task.eContainer().getIndex() + "/tasks/" + task.getIndex() + "/index.md"
+}
+
 rule Partner
     transform partner : Partner {
 

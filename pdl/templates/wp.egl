@@ -1,0 +1,12 @@
+[%import "pdl.eol";%]
+# [%=wp.getId()%]: [%=wp.title%]
+
+**Leader**: [[%=wp.leader.title%]](../../partners/[%=wp.leader.name.toLowerCase()%])
+
+## Tasks
+
+| Task | Start | End |
+| --- | --- | --- |
+[%for (task in wp.tasks){%]
+|[[%=task.getId()%] [%=task.title%]](tasks/[%=task.getIndex()%]) | M[%=task.start%] | M[%=task.end%] |
+[%}%]

@@ -1,6 +1,6 @@
 <?nsuri pdl?>
 <project name="TYPHON" 
-	title="Polyglot and Hybrod Peristence Architectures for Big-Data Analytics"
+	title="Polyglot and Hybrid Peristence Architectures for Big-Data Analytics"
 	duration="36">
 	
 	<wp title="Requirements and Use Cases" leader="TOG" type="RTD">

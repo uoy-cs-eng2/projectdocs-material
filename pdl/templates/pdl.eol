@@ -3,7 +3,7 @@ operation WP getId() {
 }
 
 operation Task getId() {
-    return "T" + self.getIndex();
+    return "T" + self.eContainer().getIndex() + "." + self.getIndex();
 }
 
 operation Deliverable getId() {
