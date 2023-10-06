@@ -6,9 +6,13 @@ nav:
     [%for (wp in project.wps){%]
       - "[%=wp.getId()%]: [%=wp.title%]": wp/[%=wp.getIndex()%]/index.md
     [%}%]
+  - Use Cases:
+    [%for (usecase in UseCase.all){%]
+      - "[%=usecase.title%]": usecase/[%=usecase.eContainer().name.toLowerCase()%]/index.md
+    [%}%]
   - Partners:
     [%for (partner in project.partners){%]
-      - "[%=partner.title%]": partners/[%=partner.name.toLowerCase()%]/index.md
+      - "[%=partner.title%]": partner/[%=partner.name.toLowerCase()%]/index.md
     [%}%]
 theme: 
   name: material

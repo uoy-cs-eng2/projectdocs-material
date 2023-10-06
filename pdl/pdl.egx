@@ -29,13 +29,21 @@ rule Task2Page
 
     template: "templates/task.egl"
     
-    target: "../mkdocs/docs/wp/" + task.eContainer().getIndex() + "/tasks/" + task.getIndex() + "/index.md"
+    target: "../mkdocs/docs/wp/" + task.eContainer().getIndex() + "/task/" + task.getIndex() + "/index.md"
 }
 
-rule Partner
+rule Partner2Page
     transform partner : Partner {
 
     template: "templates/partner.egl"
 
-    target: "../mkdocs/docs/partners/" + partner.name.toLowerCase() + "/index.md"
+    target: "../mkdocs/docs/partner/" + partner.name.toLowerCase() + "/index.md"
+}
+
+rule UseCase2Page
+    transform usecase : UseCase {
+
+    template: "templates/usecase.egl"
+
+    target: "../mkdocs/docs/usecase/" + usecase.eContainer().name.toLowerCase() + "/index.md"
 }

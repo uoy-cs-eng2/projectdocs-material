@@ -1,10 +1,5 @@
-[%import "pdl.eol";%]
 [%import "blades.egl";%]
-# [%=task.getId()%]: [%=task.title%]
+# [%=usecase.title%]
 
 [%=out.startPreserve("<!--", "-->", "custom-content", true)%]
 [%=out.stopPreserve()%]
-
-## Partners
-
-[%=task.partners.toPartnersList()%]

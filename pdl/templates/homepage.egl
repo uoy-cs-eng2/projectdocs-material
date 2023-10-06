@@ -1,1 +1,12 @@
 # [%=project.name%]: [%=project.title%]
+
+[%=out.startPreserve("<!--", "-->", "custom-content", true)%]
+[%=out.stopPreserve()%]
+
+## Milestones
+
+| Title | Month |
+| --- | --- |
+[%for (milestone in Milestone.all){%]
+|[%=milestone.title%] | [%=milestone.month%] |
+[%}%]

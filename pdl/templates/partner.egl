@@ -1,1 +1,13 @@
+[%import "blades.egl";%]
 # [%=partner.title%]
+
+[%=out.startPreserve("<!--", "-->", "custom-content", true)%]
+[%=out.stopPreserve()%]
+
+## Tasks
+
+[%=partner.getTasks().toTasksTable()%]
+
+## Deliverables
+
+[%=partner.getDeliverables().toDeliverablesTable()%]

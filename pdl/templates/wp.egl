@@ -1,12 +1,18 @@
 [%import "pdl.eol";%]
+[%import "blades.egl";%]
 # [%=wp.getId()%]: [%=wp.title%]
 
-**Leader**: [[%=wp.leader.title%]](../../partners/[%=wp.leader.name.toLowerCase()%])
+[%=out.startPreserve("<!--", "-->", "custom-content", true)%]
+[%=out.stopPreserve()%]
+
+## Participants
+
+[%=wp.effort.partner.toPartnersList()%]
 
 ## Tasks
 
-| Task | Start | End |
-| --- | --- | --- |
-[%for (task in wp.tasks){%]
-|[[%=task.getId()%] [%=task.title%]](tasks/[%=task.getIndex()%]) | M[%=task.start%] | M[%=task.end%] |
-[%}%]
+[%=wp.tasks.toTasksTable()%]
+
+## Deliverables
+
+[%=wp.deliverables.toDeliverablesTable()%]

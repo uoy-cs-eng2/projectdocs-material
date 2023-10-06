@@ -7,7 +7,7 @@ operation Task getId() {
 }
 
 operation Deliverable getId() {
-    return "D" + self.getIndex();
+    return "D" + self.eContainer().getIndex() + "." + self.getIndex();
 }
 
 operation WP getIndex() {
@@ -20,4 +20,16 @@ operation Task getIndex() {
 
 operation Deliverable getIndex() {
     return self.eContainer().deliverables.indexOf(self) + 1;
+}
+
+operation WP getPartners() {
+    return self.effort.partner;
+}
+
+operation Partner getDeliverables() {
+    return Deliverable.all.select(d|d.partner = self).sortBy(d|d.due);
+}
+
+operation Partner getTasks() {
+    return Task.all.select(d|d.partners.includes(self));
 }

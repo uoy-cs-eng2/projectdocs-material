@@ -34,6 +34,7 @@ class Task {
 class Deliverable {
     attr String title;
     attr int due;
+    attr boolean delivered = false;
     attr String nature; // Change to enum?
     attr String dissemination; // Change to enum?
     ref Partner partner;

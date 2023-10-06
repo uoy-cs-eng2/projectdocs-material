@@ -162,10 +162,10 @@
 		<task title="Architectural Guidelines Establishment" start="1" end="6" partners="CLMS, YORK, UDA, EHU, CWI, NAMUR, TOG"/>
 		<task title="Platform Integration and Evaluation Support" start="7" end="36" partners="CLMS, YORK, UDA, EHU, CWI, ATB, NAMUR, TOG"/>
 		<task title="Evaluation Method Establishment" start="7" end="18" partners="TOG, CLMS, EHU, YORK, UDA, NAMUR, CWI, ATB, VW, GMV, ALPHA, NEA"/>
-		<task title="\useCaseOneTitle Use Case" start="18" end="36" partners="VW"/>
-		<task title="\useCaseTwoTitle Use Case" start="18" end="36" partners="GMV"/>
-		<task title="\useCaseThreeTitle Use Case" start="18" end="36" partners="ALPHA"/>
-		<task title="\useCaseFourTitle Use Case" start="18" end="36" partners="NEA"/>
+		<task title="Earth Observation Data Management Use Case" start="18" end="36" partners="VW"/>
+		<task title="Smart Connected Vehicles Use Case" start="18" end="36" partners="GMV"/>
+		<task title="Hybrid Data Warehousing Use Case" start="18" end="36" partners="ALPHA"/>
+		<task title="Motorway Monitoring and Management Use Case" start="18" end="36" partners="NEA"/>
 		
 		<deliverable title="Architectural Guidelines Report" due="6" 
 			nature="R" dissemination="" partner="CLMS"/>
@@ -173,23 +173,23 @@
 			nature="S" dissemination="" partner="CLMS"/>
 		<deliverable title="Evaluation Methodology" due="18"
 			nature="R" dissemination="" partner="TOG"/>
-		<deliverable title="\useCaseOneTitle Use Case Evaluation - Interim Version" due="21"
+		<deliverable title="Earth Observation Data Management Use Case Evaluation - Interim Version" due="21"
 			nature="R" dissemination="RE" partner="VW"/>
-		<deliverable title="\useCaseTwoTitle Use Case Evaluation - Interim Version" due="21"
+		<deliverable title="Smart Connected Vehicles Use Case Evaluation - Interim Version" due="21"
 			nature="R" dissemination="RE" partner="GMV"/>
-		<deliverable title="\useCaseThreeTitle Use Case Evaluation - Interim Version" due="21"
+		<deliverable title="Hybrid Data Warehousing Use Case Evaluation - Interim Version" due="21"
 			nature="R" dissemination="RE" partner="ALPHA"/>
-		<deliverable title="\useCaseFourTitle Use Case Evaluation - Interim Version" due="21"
+		<deliverable title="Motorway Monitoring and Management Use Case Evaluation - Interim Version" due="21"
 			nature="R" dissemination="RE" partner="NEA"/>
 		<deliverable title="Integrated Platform - Final Version" due="30"
 			nature="S" dissemination="" partner="CLMS"/>	
-		<deliverable title="\useCaseOneTitle Use Case Evaluation - Final Version" due="36"
+		<deliverable title="Earth Observation Data Management Use Case Evaluation - Final Version" due="36"
 			nature="R" dissemination="RE" partner="VW"/>
-		<deliverable title="\useCaseTwoTitle Use Case Evaluation - Final Version" due="36"
+		<deliverable title="Smart Connected Vehicles Use Case Evaluation - Final Version" due="36"
 			nature="R" dissemination="RE" partner="GMV"/>
-		<deliverable title="\useCaseThreeTitle Use Case Evaluation - Final Version" due="36"
+		<deliverable title="Hybrid Data Warehousing Use Case Evaluation - Final Version" due="36"
 			nature="R" dissemination="RE" partner="ALPHA"/>
-		<deliverable title="\useCaseFourTitle Use Case Evaluation - Final Version" due="36"
+		<deliverable title="Motorway Monitoring and Management Use Case Evaluation - Final Version" due="36"
 			nature="R" dissemination="RE" partner="NEA"/>
 	</wp>
 	
@@ -271,11 +271,11 @@
 	<milestone title="Project completion" month="36"/>
 	
 	<partner name="TOG" title="The Open Group (X/Open Company)" country="United Kingdom"/>
-	<partner name="VW" title="Volkswagen AG" country="Germany">
-		<usecase title="Smart Connected Vehicles" domain="automotive"/>
-	</partner>
 	<partner name="GMV" title="GMV" country="Spain">
 		<usecase title="Earth Observation Data Management" domain="earth observation"/>
+	</partner>
+	<partner name="VW" title="Volkswagen AG" country="Germany">
+		<usecase title="Smart Connected Vehicles" domain="automotive"/>
 	</partner>
 	<partner name="ALPHA" title="Alpha Bank" country="Greece">
 		<usecase title="Hybrid Data Warehousing" domain="banking"/>
@@ -290,5 +290,4 @@
 	<partner name="CWI" title="Centrum Wiskunde Informatica" country="Netherlands"/>
 	<partner name="ATB" title="Institut für angewandte Systemtechnik Bremen GmbH" country="Germany"/>
 	<partner name="CLMS" title="Contemporary Learning Management Systems" country="Greece"/>
-	
 </project>

@@ -1,0 +1,35 @@
+[%import "pdl.eol";%]
+[%
+@template
+operation Any toDeliverablesTable() {
+%]
+| Title | Due | Status |
+| --- | --- | --- |
+[%for (deliverable in self){%]
+|[[%=deliverable.getId()%] [%=deliverable.title%]](#) | M[%=deliverable.due%] | [%if (deliverable.delivered){%]:material-check:[%}else{%]:material-close: [%}%] |
+[%}%]
+[%    
+}
+%]
+
+[%
+@template
+operation Any toTasksTable() {%]
+| Title | Start | End |
+| --- | --- | --- |
+[%for (task in self){%]
+|[[%=task.getId()%] [%=task.title%]](/wp/[%=task.eContainer().getIndex()%]/task/[%=task.getIndex()%]) | M[%=task.start%] | M[%=task.end%] |
+[%}%]
+[%    
+}
+%]
+
+[%
+@template
+operation Any toPartnersList() {%]
+[%for (partner in self){%]
+- [[%=partner.title%]](../../partner/[%=partner.name.toLowerCase()%])[%if (loopCount == 1){%] (lead) [%}%] 
+[%}%]
+[%    
+}
+%]
