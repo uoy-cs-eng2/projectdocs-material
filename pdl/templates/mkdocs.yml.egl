@@ -1,0 +1,25 @@
+[%import "pdl.eol";%]
+site_name: [%=project.name%]
+nav:
+  - Home: index.md
+  - Work Packages:
+    [%for (wp in project.wps){%]
+      - "[%=wp.getId()%]: [%=wp.title%]": wp/[%=wp.getIndex()%]/index.md
+    [%}%]
+  - Partners:
+    [%for (partner in project.partners){%]
+      - "[%=partner.title%]": partners/[%=partner.name.toLowerCase()%]/index.md
+    [%}%]
+theme: 
+  name: material
+markdown_extensions:
+  - admonition
+  - meta
+  - pymdownx.details
+  - footnotes
+  - pymdownx.tabbed
+  - toc:
+      permalink: true   
+plugins:
+    - search
+    - macros

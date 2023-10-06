@@ -1,0 +1,294 @@
+<?nsuri pdl?>
+<project name="TYPHON" 
+	title="Polyglot and Hybrod Peristence Architectures for Big-Data Analytics"
+	duration="36">
+	
+	<wp title="Requirements and Use Cases" leader="TOG" type="RTD">
+		<effort partner="TOG" months="4.5"/>
+		<effort partner="YORK" months="6"/>
+		<effort partner="UDA" months="5"/>
+		<effort partner="NAMUR" months="3"/>
+		<effort partner="EHU" months="5"/>
+		<effort partner="CWI" months="3"/>
+		<effort partner="ATB" months="4"/>
+		<effort partner="CLMS" months="4"/>
+		<effort partner="ALPHA" months="4.5"/>
+		<effort partner="NEA" months="4.5"/>
+		<effort partner="GMV" months="4.5"/>
+		<effort partner="VW" months="4.5"/>
+		
+		<task title="Use Case Analysis" start="1" end="6" :partners="Partner.all"/>
+		<task title="Technology Analysis" start="3" end="6" :partners="Partner.all"/>
+		<task title="Evaluation Planning" start="4" end="6" :partners="Partner.all"/>
+		
+		<deliverable title="Project Requirements" due="6" 
+			nature="R" dissemination="RE" partner="TOG"/>
+		<deliverable title="Evaluation Plan" due="6" 
+			nature="R" dissemination="RE" partner="TOG"/>
+	</wp>
+	
+	<wp title="Hybrid Polystore Design" leader="UDA" type="RTD">
+		<effort partner="UDA" months="16"/>
+		<effort partner="EHU" months="6"/>
+		<effort partner="YORK" months="4.5"/>
+		<effort partner="NAMUR" months="1"/>		
+		<effort partner="CWI" months="2.5"/>
+		<effort partner="ATB" months="3"/>
+		<effort partner="CLMS" months="5"/>
+		
+		<task title="Hybrid Polystore Modelling Language (TyphonML) Design" start="1" end="12" partners="UDA, YORK, NAMUR, CLMS, CWI"/>
+		<task title="Textual Data Modelling" start="1" end="12" partners="EHU, UDA, ATB"/>
+		<task title="TyphonML Modelling Tools Design and Implementation" start="13" end="18" partners="UDA, YORK, ATB"/>
+		<task title="Analysis and Reasoning on TyphonML Models" start="19" end="24" partners="UDA, YORK, ATB"/>
+
+		<deliverable title="Hybrid Polystore Modelling Language (Interim Version)" due="6" nature="R" dissemination="" partner="UDA"/>
+		<deliverable title="Text Modelling Extension" due="12" nature="R" dissemination="" partner="EHU"/>
+		<deliverable title="Hybrid Polystore Modelling Language (Final Version)" due="12" nature="S" dissemination="" partner="UDA"/>
+		<deliverable title="TyphonML Modelling Tools" due="18" nature="S" dissemination="" partner="UDA"/>
+		<deliverable title="TyphonML Model Analysis and Reasoning Tools" due="24" nature="S" dissemination="" partner="UDA"/>
+
+	</wp>
+
+	<wp title="Hybrid Polystore Deployment" leader="ATB" type="RTD">
+
+		<effort partner="ATB" months="18"/>
+		<effort partner="UDA" months="11"/>
+		<effort partner="EHU" months="2"/>
+		<effort partner="YORK" months="4.5"/>		
+		<effort partner="CWI" months="1.5"/>
+		<effort partner="CLMS" months="4.0"/>
+		
+		<task title="Hybrid Polystore Deployment Language (TyphonDL) Design" start="1" end="12" partners="ATB, UDA, YORK, EHU, CLMS, CWI"/>
+		<task title="TyphonDL Modelling Tools Design and Implementation" start="13" end="18" partners="UDA, YORK, EHU, ATB, CLMS"/>
+		<task title="Transformation of TyphonML Design Models to Deployment (TyphonDL) Models" start="19" end="24" partners="ATB, UDA, YORK, EHU, CWI"/>
+		<task title="Assembly of Optimised Hybrid Polystore VMs from Deployment Models" start="25" end="30" partners="ATB, UDA, YORK, CWI"/>
+
+		<deliverable title="Hybrid Polystore Deployment Language (Interim Version)" due="12" nature="S" dissemination="" partner="ATB"/>
+		<deliverable title="TyphonDL Tools" due="18" nature="S" dissemination="" partner="ATB"/>
+		<deliverable title="TyphonML to TyphonDL Model Transformation Tools" due="24" nature="S" dissemination="" partner="UDA"/>
+		<deliverable title="Hybrid Polystore Deployment Language (Final Version)" due="30" nature="S" dissemination="" partner="ATB"/>
+		<deliverable title="Optimized Hybrid Polystore VM Assembly Tools" due="30" nature="S" dissemination="" partner="ATB"/>
+	</wp>
+
+
+	<wp title="Hybrid Polystore Querying" leader="CWI" type="RTD">
+
+		<effort partner="CWI" months="26.5"/>
+		<effort partner="EHU" months="11"/>
+		<effort partner="YORK" months="6"/>
+		<effort partner="UDA" months="2"/>
+		<effort partner="NAMUR" months="1"/>
+		<effort partner="ATB" months="2"/>
+		
+		<task title="Analysis of Query Languages and Meta-Query Frameworks" start="1" end="6" partners="CWI"/>
+		<task title="Hybrid Polystore Query Language (TyphonQL) Design and Implementation" start="7" end="12" partners="CWI, UDA, YORK, NAMUR, EHU"/>
+		<task title="Automated Compilation and Interpretation of TyphonQL Queries on Structured Data" start="13" end="24" partners="CWI, EHU"/>
+		<task title="Automated Compilation and Interpretation of TyphonQL Queries on Textual Data" start="13" end="24" partners="EHU, CWI, ATB"/>
+		<task title="Data Access Layer Generation" start="25" end="30" partners="CWI, UDA, ATB"/>
+
+		<deliverable title="Query Languages and Meta-Query Frameworks Analysis Report" due="6" nature="R" dissemination="" partner="CWI"/>
+		<deliverable title="Hybrid Polystore Query Language (TyphonQL)" due="12" nature="R" dissemination="" partner="CWI"/>
+		<deliverable title="TyphonQL Compilers and Interpeters (Initial Version)" due="18" nature="S" dissemination="" partner="CWI"/>
+		<deliverable title="TyphonQL Compilers and Interpreters (Interim Version)" due="24" nature="S" dissemination="" partner="CWI"/>
+		<deliverable title="TyphonQL Compilers and Interpreters (Final Version)" due="30" nature="S" dissemination="" partner="CWI"/>
+		<deliverable title="Data Access Layer Generator" due="30" nature="S" dissemination="" partner="CWI"/>
+	</wp>
+	
+	<wp title="Hybrid Polystore Analytics and Monitoring" leader="YORK" type="RTD">
+
+		<effort partner="YORK" months="27"/>
+		<effort partner="CLMS" months="12"/>
+		<effort partner="TOG" months="2"/>		
+		<effort partner="CWI" months="2"/>
+		<effort partner="ATB" months="2.5"/>
+		<effort partner="UDA" months="2"/>
+		<effort partner="EHU" months="12.6"/>
+		<effort partner="NAMUR" months="1"/>
+
+		<task title="Data Event Domain Analysis" start="1" end="6" partners="YORK, EHU, CLMS, TOG"/>
+		<task title="Data Event Organisation and Representation" start="7" end="12" partners="YORK, EHU, CWI, ATB, UDA, CLMS, NAMUR"/>
+		<task title="Data Event Publishing and Processing" start="13" end="18" partners="YORK, EHU, CWI, CLMS, ATB"/>
+		<task title="Text Processing Pipelines Design and Implementation" start="6" end="30" partners="EHU, YORK, ATB"/>
+		
+		<deliverable title="Data Event Domain Analysis Report" due="6" nature="R" dissemination="" partner="YORK"/>
+		<deliverable title="Data Event Organisation and Representation Report" due="12" nature="R" dissemination="" partner="YORK"/>
+		<deliverable title="Event Publishing and Monitoring Architecture (Interim Version)" due="18" nature="S" dissemination="" partner="YORK"/>
+		<deliverable title="Text Processing Pipelines (Interim Version)" due="18" nature="R" dissemination="" partner="EHU"/>
+		<deliverable title="Event Publishing and Monitoring Architecture (Final Version)" due="24" nature="S" dissemination="" partner="YORK"/>
+		<deliverable title="Text Processing Pipelines (Final Version)" due="30" nature="R" dissemination="" partner="EHU"/>
+		
+	</wp>
+
+	<wp title="Hybrid Polystore Evolution" leader="NAMUR" type="RTD">
+
+		<effort partner="NAMUR" months="24"/>
+		<effort partner="YORK" months="4.5"/>
+		<effort partner="CLMS" months="4"/>
+		<effort partner="EHU" months="4"/>
+		<effort partner="TOG" months="3"/>
+		<effort partner="UDA" months="2"/>
+		<effort partner="CWI" months="3"/>
+		<effort partner="ATB" months="2"/>
+		
+		<task title="Analysis of Cross-Database Data Migration Techniques" start="1" end="6" partners="NAMUR, TOG"/>
+		<task title="Hybrid Polystore Schema Evolution" start="7" end="12" partners="NAMUR, EHU, UDA, CLMS, YORK"/>
+		<task title="Hybrid Polystore Data Migration" start="13" end="18" partners="NAMUR, EHU, UDA"/>
+		<task title="Hybrid Polystore Query Evolution" start="19" end="24" partners="NAMUR, YORK, CWI, CLMS, ATB"/>
+		<task title="Hybrid Polystore Continuous Evolution" start="25" end="30" partners="NAMUR, EHU, YORK, ATB"/>
+
+		<deliverable title="Cross-Database Data Migration Techniques Analysis Report" due="6" nature="R" dissemination="" partner="NAMUR"/>
+		<deliverable title="Hybrid Polystore Schema Evolution Methodology and Tools" due="12" nature="S" dissemination="" partner="NAMUR"/>
+		<deliverable title="Hybrid Polystore Data Migration Tools" due="18" nature="S" dissemination="" partner="NAMUR"/>
+		<deliverable title="Hybrid Polystore Query Evolution Tools" due="24" nature="S" dissemination="" partner="NAMUR"/>
+		<deliverable title="Hybrid Polystore Continous Evolution Tools" due="30" nature="S" dissemination="" partner="NAMUR"/>
+
+	</wp>
+	
+	<wp title="Platform Integration and Evaluation" leader="CLMS" type="RTD">
+	
+		<effort partner="CLMS" months="16"/>
+		<effort partner="EHU" months="8"/>
+		<effort partner="YORK" months="7"/>
+		<effort partner="TOG" months="5.5"/>
+		<effort partner="UDA" months="4"/>
+		<effort partner="NAMUR" months="4"/>
+		<effort partner="CWI" months="3"/>
+		<effort partner="ATB" months="6"/>
+		<effort partner="VW" months="21"/>
+		<effort partner="GMV" months="26.5"/>		
+		<effort partner="ALPHA" months="21"/>
+		<effort partner="NEA" months="21"/>
+		
+		<task title="Architectural Guidelines Establishment" start="1" end="6" partners="CLMS, YORK, UDA, EHU, CWI, NAMUR, TOG"/>
+		<task title="Platform Integration and Evaluation Support" start="7" end="36" partners="CLMS, YORK, UDA, EHU, CWI, ATB, NAMUR, TOG"/>
+		<task title="Evaluation Method Establishment" start="7" end="18" partners="TOG, CLMS, EHU, YORK, UDA, NAMUR, CWI, ATB, VW, GMV, ALPHA, NEA"/>
+		<task title="\useCaseOneTitle Use Case" start="18" end="36" partners="VW"/>
+		<task title="\useCaseTwoTitle Use Case" start="18" end="36" partners="GMV"/>
+		<task title="\useCaseThreeTitle Use Case" start="18" end="36" partners="ALPHA"/>
+		<task title="\useCaseFourTitle Use Case" start="18" end="36" partners="NEA"/>
+		
+		<deliverable title="Architectural Guidelines Report" due="6" 
+			nature="R" dissemination="" partner="CLMS"/>
+		<deliverable title="Integrated Platform - Interim Version" due="18"
+			nature="S" dissemination="" partner="CLMS"/>
+		<deliverable title="Evaluation Methodology" due="18"
+			nature="R" dissemination="" partner="TOG"/>
+		<deliverable title="\useCaseOneTitle Use Case Evaluation - Interim Version" due="21"
+			nature="R" dissemination="RE" partner="VW"/>
+		<deliverable title="\useCaseTwoTitle Use Case Evaluation - Interim Version" due="21"
+			nature="R" dissemination="RE" partner="GMV"/>
+		<deliverable title="\useCaseThreeTitle Use Case Evaluation - Interim Version" due="21"
+			nature="R" dissemination="RE" partner="ALPHA"/>
+		<deliverable title="\useCaseFourTitle Use Case Evaluation - Interim Version" due="21"
+			nature="R" dissemination="RE" partner="NEA"/>
+		<deliverable title="Integrated Platform - Final Version" due="30"
+			nature="S" dissemination="" partner="CLMS"/>	
+		<deliverable title="\useCaseOneTitle Use Case Evaluation - Final Version" due="36"
+			nature="R" dissemination="RE" partner="VW"/>
+		<deliverable title="\useCaseTwoTitle Use Case Evaluation - Final Version" due="36"
+			nature="R" dissemination="RE" partner="GMV"/>
+		<deliverable title="\useCaseThreeTitle Use Case Evaluation - Final Version" due="36"
+			nature="R" dissemination="RE" partner="ALPHA"/>
+		<deliverable title="\useCaseFourTitle Use Case Evaluation - Final Version" due="36"
+			nature="R" dissemination="RE" partner="NEA"/>
+	</wp>
+	
+	<wp title="Dissemination and Exploitation" leader="TOG" type="RTD">
+	
+		<effort partner="TOG" months="9.5"/>
+		<effort partner="YORK" months="7.5"/>
+		<effort partner="UDA" months="7.5"/>
+		<effort partner="NAMUR" months="3"/>
+		<effort partner="EHU" months="7.5"/>
+		<effort partner="CWI" months="3.4"/>		
+		<effort partner="ATB" months="6"/>
+		<effort partner="CLMS" months="6.5"/>
+		<effort partner="ALPHA" months="5.5"/>
+		<effort partner="NEA" months="5.5"/>
+		<effort partner="GMV" months="5.5"/>
+		<effort partner="VW" months="5.5"/>
+		
+		<task title="Dissemination and Promotion" start="1" end="36" :partners="Partner.all"/>
+		<task title="Exploitation and IPR" start="1" end="36" :partners="Partner.all"/>
+		<task title="Communications" start="1" end="36" :partners="Partner.all"/>
+		<task title="Market Watch" start="1" end="36" :partners="Partner.all"/>
+		<task title="Contribution to Standards" start="1" end="36" :partners="Partner.all"/>
+		
+		<deliverable title="Project Website" due="3" 
+			nature="DEC" dissemination="PU" partner="TOG"/>
+		<deliverable title="Project Presentation and Brochure" due="6" 
+			nature="DEC" dissemination="PU" partner="TOG"/>
+		<deliverable title="Initial Dissemination and Use Plan" due="14" 
+			nature="R" dissemination="RE" partner="TOG"/>
+		<deliverable title="Press and Media Materials" due="24" 
+			nature="DEC" dissemination="PU" partner="TOG"/>
+		<deliverable title="Final Dissemination and Use Plan" due="36" 
+			nature="R" dissemination="RE" partner="TOG"/>
+		<deliverable title="Standardisation Report" due="36" 
+			nature="R" dissemination="RE" partner="TOG"/>		
+	</wp>
+	
+	<wp title="Project Management" leader="TOG" type="MGT">
+	
+		<effort partner="TOG" months="11.5"/>
+		<effort partner="YORK" months="7.0"/>
+		<effort partner="UDA" months="1.3"/>
+		<effort partner="NAMUR" months="1.3"/>
+		<effort partner="CWI" months="1.3"/>
+		<effort partner="ATB" months="1.3"/>
+		<effort partner="EHU" months="1.5"/>
+		<effort partner="CLMS" months="1.3"/>
+		<effort partner="ALPHA" months="1.3"/>
+		<effort partner="NEA" months="1.3"/>
+		<effort partner="GMV" months="1.3"/>
+		<effort partner="VW" months="1.3"/>
+		
+		<task title="Consortium start up" start="1" end="3" :partners="Partner.all"/>
+		<task title="Project progress tracking and coordination" start="1" end="36" partners="TOG"/>
+		<task title="Quality Management" start="1" end="36" partners="TOG"/>
+		<task title="Project reporting to EU" start="6" end="36" :partners="Partner.all"/>
+		<task title="Project reviews and contract revisions" start="12" end="36" :partners="Partner.all"/>
+		
+		<deliverable title="Quality Management Plan" due="3" 
+			nature="R" dissemination="RE" partner="TOG"/>	
+		<deliverable title="Data Management Plan" due="6" 
+			nature="R" dissemination="RE" partner="TOG"/>	
+		<deliverable title="1st Interim Project Report" due="9" 
+			nature="R" dissemination="RE" partner="TOG"/>
+		<deliverable title="1st Periodic Project Report" due="18" 
+			nature="R" dissemination="RE" partner="TOG"/>
+		<deliverable title="2nd Interim Project Report" due="24" 
+			nature="R" dissemination="RE" partner="TOG"/>
+		<deliverable title="Final Project Report" due="36" 
+			nature="R" dissemination="RE" partner="TOG"/>
+	</wp>
+	
+	<milestone title="Requirements and case studies completion" month="6"/>
+	<milestone title="Languages definition completion" month="12"/>
+	<milestone title="Platform and methodology - initial version" month="18"/>
+	<milestone title="Platform and methodology - interim version" month="24"/>
+	<milestone title="Platform ready for evaluation" month="30"/>
+	<milestone title="Project completion" month="36"/>
+	
+	<partner name="TOG" title="The Open Group (X/Open Company)" country="United Kingdom"/>
+	<partner name="VW" title="Volkswagen AG" country="Germany">
+		<usecase title="Smart Connected Vehicles" domain="automotive"/>
+	</partner>
+	<partner name="GMV" title="GMV" country="Spain">
+		<usecase title="Earth Observation Data Management" domain="earth observation"/>
+	</partner>
+	<partner name="ALPHA" title="Alpha Bank" country="Greece">
+		<usecase title="Hybrid Data Warehousing" domain="banking"/>
+	</partner>
+	<partner name="NEA" title="Nea Odos" country="Greece">
+		<usecase title="Motorway Monitoring and Management" domain="motorway operation"/>
+	</partner>
+	<partner name="YORK" title="University of York" country="United Kingdom"/>
+	<partner name="UDA" title="University of L'Aquila" country="Italy"/>
+	<partner name="NAMUR" title="University of Namur" country="Belgium"/>
+	<partner name="EHU" title="Edge Hill University" country="United Kingdom"/>	
+	<partner name="CWI" title="Centrum Wiskunde Informatica" country="Netherlands"/>
+	<partner name="ATB" title="Institut für angewandte Systemtechnik Bremen GmbH" country="Germany"/>
+	<partner name="CLMS" title="Contemporary Learning Management Systems" country="Greece"/>
+	
+</project>

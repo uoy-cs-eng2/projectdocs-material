@@ -1,0 +1,55 @@
+package pdl;
+
+class Project {
+    attr String name;
+    attr String title;
+    attr int duration;
+    val WP[*] wps;
+    val Partner[*] partners;
+    val Milestone[*] milestones;
+}
+
+class WP {
+    attr String title;
+    attr String type; // Change to enum?
+    ref Partner leader;
+    val Task[*] tasks;
+    val Deliverable[*] deliverables;
+    val Milestone[*] milestones;
+}
+
+class Effort {
+    ref Partner partner;
+    attr Double months;
+}
+
+class Task {
+    attr String title;
+    attr int start;
+    attr int end;
+    ref Partner[*] partners;
+}
+
+class Deliverable {
+    attr String title;
+    attr int due;
+    attr String nature; // Change to enum?
+    attr String dissemination; // Change to enum?
+    ref Partner partner;
+}
+
+class Partner {
+    attr String name;
+    attr String title;
+    val UseCase[*] usecases;
+}
+
+class UseCase {
+    attr String title;
+    attr String domain;
+}
+
+class Milestone {
+    attr String title;
+    attr int month;
+}

@@ -1,0 +1,23 @@
+operation WP getId() {
+    return "WP" + self.getIndex();
+}
+
+operation Task getId() {
+    return "T" + self.getIndex();
+}
+
+operation Deliverable getId() {
+    return "D" + self.getIndex();
+}
+
+operation WP getIndex() {
+    return self.eContainer().wps.indexOf(self) + 1;
+}
+
+operation Task getIndex() {
+    return self.eContainer().tasks.indexOf(self) + 1;
+}
+
+operation Deliverable getIndex() {
+    return self.eContainer().deliverables.indexOf(self) + 1;
+}

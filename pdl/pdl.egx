@@ -1,0 +1,33 @@
+import "templates/pdl.eol";
+
+rule Project2MkdocsYaml
+    transform project : Project {
+    
+    template: "templates/mkdocs.yml.egl"
+    
+    target: "../mkdocs/mkdocs.yml"
+}
+
+rule Homepage
+    transform project : Project {
+    
+    template: "templates/homepage.egl"
+    
+    target: "../mkdocs/docs/index.md"
+}
+
+rule WP2Page
+    transform wp : WP {
+
+    template: "templates/wp.egl"
+    
+    target: "../mkdocs/docs/wp/" + wp.getIndex() + "/index.md"
+}
+
+rule Partner
+    transform partner : Partner {
+
+    template: "templates/partner.egl"
+
+    target: "../mkdocs/docs/partners/" + partner.name.toLowerCase() + "/index.md"
+}
