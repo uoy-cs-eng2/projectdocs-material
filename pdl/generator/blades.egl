@@ -28,7 +28,7 @@ operation Any toTasksTable() {%]
 @template
 operation Any toPartnersList() {%]
 [%for (partner in self){%]
-- [[%=partner.title%]](../../partner/[%=partner.name.toLowerCase()%])[%if (loopCount == 1){%] (lead) [%}%] 
+- [[%=partner.title%]](/partner/[%=partner.name.toLowerCase()%])[%if (loopCount == 1){%] (lead) [%}%] 
 [%}%]
 [%    
 }
