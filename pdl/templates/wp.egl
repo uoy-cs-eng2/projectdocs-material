@@ -5,7 +5,7 @@
 [%=out.startPreserve("<!--", "-->", "custom-content", true)%]
 [%=out.stopPreserve()%]
 
-## Participants
+## Partners
 
 [%=wp.effort.partner.toPartnersList()%]
 

@@ -1,5 +1,7 @@
 [%import "blades.egl";%]
 # [%=usecase.title%]
 
+**Partner**: [[%=usecase.eContainer().title%]](/partner/[%=usecase.eContainer().name.toLowerCase()%])
+
 [%=out.startPreserve("<!--", "-->", "custom-content", true)%]
 [%=out.stopPreserve()%]
