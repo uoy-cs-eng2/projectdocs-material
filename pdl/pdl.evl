@@ -1,0 +1,14 @@
+import "pdl.eol";
+
+context Task {
+
+	constraint EndAfterStart {
+		check : self.end > self.start
+		message : "Task " + self.getId() + " ends before it starts"
+	}
+
+	constraint WithinTheProject {
+		check : self.end <= Project.all.first().duration
+		message : "Task " + self.getId() + " ends after the end of the project"
+	}
+}

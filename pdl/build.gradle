@@ -34,6 +34,9 @@ task run {
     // Load the project.flexmi EMF model
     ant.'epsilon.emf.loadModel'(name: 'M', modelfile: 'project.flexmi', metamodelfile: 'pdl.emf')
 
+    // Validate it with pdl.evl
+    ant.'epsilon.evl'(src: 'pdl.evl'){ model(ref: 'M') }
+
     // Run pdl.egx against it
-    ant.'epsilon.egl'(src: 'pdl.egx'){ model(ref: 'M') }
+    ant.'epsilon.egl'(src: 'generator/pdl.egx'){ model(ref: 'M') }
     }

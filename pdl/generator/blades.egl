@@ -1,4 +1,4 @@
-[%import "pdl.eol";%]
+[%import "../pdl.eol";%]
 [%
 @template
 operation Any toDeliverablesTable() {

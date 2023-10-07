@@ -1,4 +1,4 @@
-[%import "pdl.eol";%]
+[%import "../pdl.eol";%]
 [%import "blades.egl";%]
 # [%=wp.getId()%]: [%=wp.title%]
 

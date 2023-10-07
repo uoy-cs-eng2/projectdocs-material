@@ -1,4 +1,4 @@
-[%import "pdl.eol";%]
+[%import "../pdl.eol";%]
 site_name: [%=project.name%]
 nav:
   - Home: index.md
