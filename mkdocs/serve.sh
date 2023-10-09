@@ -13,4 +13,4 @@ fi
 # Serve the website
 source env/bin/activate
 pip install -r requirements.txt
-mkdocs serve --dev-addr "127.0.0.1:8001"
+mkdocs serve --dev-addr "127.0.0.1:8000"
