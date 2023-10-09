@@ -1,4 +1,4 @@
-[%import "blades.egl";%]
+[%import "tops.egl";%]
 # [%=usecase.title%]
 
 **Partner**: [[%=usecase.eContainer().title%]](/partner/[%=usecase.eContainer().name.toLowerCase()%])

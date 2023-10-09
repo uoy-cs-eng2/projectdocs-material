@@ -1,12 +1,17 @@
+[*"tops" stands for "template operations"*]
 [%import "../pdl.eol";%]
 [%
 @template
-operation Any toDeliverablesTable() {
+operation Collection<Deliverable> toDeliverablesTable() {
 %]
-| Title | Due | Status |
-| --- | --- | --- |
+| Title | Due |
+| --- | --- |
 [%for (deliverable in self){%]
-|[[%=deliverable.getId()%] [%=deliverable.title%]](#) | M[%=deliverable.due%] | [%if (deliverable.delivered){%]:material-check:[%}else{%]:material-close: [%}%] |
+[%if (deliverable.delivered){%]
+|[[%=deliverable.getId()%] [%=deliverable.title%]](/deliverables/[%=deliverable.getId()%].pdf) | M[%=deliverable.due%] |
+[%}else{%]
+|[%=deliverable.getId()%] [%=deliverable.title%] | M[%=deliverable.due%] |
+[%}%]
 [%}%]
 [%    
 }
@@ -14,7 +19,7 @@ operation Any toDeliverablesTable() {
 
 [%
 @template
-operation Any toTasksTable() {%]
+operation Collection<Task> toTasksTable() {%]
 | Title | Start | End |
 | --- | --- | --- |
 [%for (task in self){%]
@@ -26,7 +31,7 @@ operation Any toTasksTable() {%]
 
 [%
 @template
-operation Any toPartnersList() {%]
+operation Collection<Partner> toPartnersList() {%]
 [%for (partner in self){%]
 - [[%=partner.title%]](/partner/[%=partner.name.toLowerCase()%])[%if (loopCount == 1){%] (lead) [%}%] 
 [%}%]

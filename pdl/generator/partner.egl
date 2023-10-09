@@ -1,4 +1,4 @@
-[%import "blades.egl";%]
+[%import "tops.egl";%]
 # [%=partner.title%]
 
 [%=out.startPreserve("<!--", "-->", "custom-content", true)%]

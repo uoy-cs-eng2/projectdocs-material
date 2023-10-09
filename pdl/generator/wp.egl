@@ -1,5 +1,5 @@
 [%import "../pdl.eol";%]
-[%import "blades.egl";%]
+[%import "tops.egl";%]
 # [%=wp.getId()%]: [%=wp.title%]
 
 [%=out.startPreserve("<!--", "-->", "custom-content", true)%]

@@ -168,7 +168,7 @@
 		<task title="Motorway Monitoring and Management Use Case" start="18" end="36" partners="NEA"/>
 		
 		<deliverable title="Architectural Guidelines Report" due="6" 
-			nature="R" dissemination="" partner="CLMS"/>
+			nature="R" dissemination="" partner="CLMS" delivered="true"/>
 		<deliverable title="Integrated Platform - Interim Version" due="18"
 			nature="S" dissemination="" partner="CLMS"/>
 		<deliverable title="Evaluation Methodology" due="18"
