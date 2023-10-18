@@ -10,4 +10,10 @@ To generate the website from the project model, you need to run `gradle run` fro
 
 ## Serving the Website
 
-To serve the website, you need to run `docker run --rm -it -p 8000:8000 -v ${PWD}:/docs/ squidfunk/mkdocs-material` from the `mkdocs` directory. You can then access the generated site at http://localhost:8000.
+To serve the website, you need to run the following command from the `mkdocs` directory:
+
+```
+docker run --rm -it -p 8000:8000 -v ${PWD}:/docs/ squidfunk/mkdocs-material
+```
+
+You can then access the generated site at http://localhost:8000.
