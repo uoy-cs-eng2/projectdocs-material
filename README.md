@@ -24,4 +24,4 @@ docker run --rm -it -p 8000:8000 -v %cd%:/docs/ squidfunk/mkdocs-material
 docker run --rm -it -p 8000:8000 -v ${PWD}:/docs/ squidfunk/mkdocs-material
 ```
 
-You can then access the generated site at http://localhost:8000.
+You can then access the generated website at http://localhost:8000.
