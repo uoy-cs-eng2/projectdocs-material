@@ -12,6 +12,14 @@ To generate the website from the project model, you need to run `gradle run` fro
 
 To serve the website, you need to run the following command from the `mkdocs` directory:
 
+### Windows
+
+```
+docker run --rm -it -p 8000:8000 -v %cd%:/docs/ squidfunk/mkdocs-material
+```
+
+### Linux / Mac
+
 ```
 docker run --rm -it -p 8000:8000 -v ${PWD}:/docs/ squidfunk/mkdocs-material
 ```
