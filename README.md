@@ -24,4 +24,8 @@ docker run --rm -it -p 8000:8000 -v %cd%:/docs/ squidfunk/mkdocs-material
 docker run --rm -it -p 8000:8000 -v ${PWD}:/docs/ squidfunk/mkdocs-material
 ```
 
-You can then access the generated website at http://localhost:8000.
+You can then access the generated site at http://localhost:8000.
+
+## Advanced
+
+Gradle also supports the `--continuous` flag, which keeps the build alive and re-runs tasks when their inputs have changed. To try this out, run `gradle --continuous run` instead of `gradle run`, serve the website as shown above, then modify `project.flexmi` (e.g. change the title of the project) and then observe Gradle picking up the change and regenerating the respective Markdown files from it automatically.
