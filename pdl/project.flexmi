@@ -288,6 +288,6 @@
 	<partner name="NAMUR" title="University of Namur" country="Belgium"/>
 	<partner name="EHU" title="Edge Hill University" country="United Kingdom"/>	
 	<partner name="CWI" title="Centrum Wiskunde Informatica" country="Netherlands"/>
-	<partner name="ATB" title="Institut für angewandte Systemtechnik Bremen GmbH" country="Germany"/>
+	<partner name="ATB" title="Institut fur angewandte Systemtechnik Bremen GmbH" country="Germany"/>
 	<partner name="CLMS" title="Contemporary Learning Management Systems" country="Greece"/>
 </project>
