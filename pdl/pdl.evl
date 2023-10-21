@@ -2,13 +2,60 @@ import "pdl.eol";
 
 context Task {
 
+	// Tasks cannot end before they start
 	constraint EndAfterStart {
 		check : self.end > self.start
 		message : "Task " + self.getId() + " ends before it starts"
 	}
 
+	// Tasks cannot end after the end of the project
 	constraint WithinTheProject {
-		check : self.end <= Project.all.first().duration
+		check : self.end <= self.eContainer().eContainer().duration
 		message : "Task " + self.getId() + " ends after the end of the project"
 	}
+
+	// All partners who participate in the task must have effort in the tasks's workpackage
+	constraint ParticipationImpliesEffort {
+		check {
+			var problematicPartners = self.partners.excludingAll(self.eContainer().getPartnersWithEffort());
+			return problematicPartners.isEmpty();
+		}
+
+		message: "Partners " + problematicPartners.name.concat(", ") + 
+			" participate in task " + self.`title` + " but do " +
+			"not have any effort in work package " + self.eContainer().`title`
+	}
+}
+
+context WP {
+
+	// All partners who have effort in the work-package must also contribute to at least one of its tasks
+	constraint EffortImpliesParticipation {
+		check {
+			var problematicPartners = self.getPartnersWithEffort().excludingAll(self.getPartnersInTasks());
+			return problematicPartners.isEmpty();
+		}
+
+		message: "Partners " + problematicPartners.name.concat(", ") + 
+			" have effort in work package " + self.`title` + " but do " +
+			"not participate in any of its tasks"
+	}
+}
+
+context Partner {
+
+	// Partners need to participate in at least one task
+	constraint ParticipatesInTasks {
+		check: Task.all.exists(t | t.partners.includes(self))
+
+		message: "Partner " + self.name + " does not participate in any tasks"
+	}
+}
+
+operation WP getPartnersInTasks() {
+	return self.tasks.partners.flatten().asSet();
+}
+
+operation WP getPartnersWithEffort() {
+	return self.effort.partner.asSet();
 }
