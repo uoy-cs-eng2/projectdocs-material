@@ -31,18 +31,12 @@ task setupEpsilonTasks {
 task run {
     dependsOn tasks.setupEpsilonTasks
     
-    // When executed in the --continuous mode it triggers the task when project.flexmi changes
-    inputs.file('project.flexmi')
-    outputs.dir('../mkdocs')
+    // Load the project.flexmi EMF model
+    ant.'epsilon.emf.loadModel'(name: 'M', modelfile: 'project.flexmi', metamodelfile: 'pdl.emf')
 
-    doLast {
-        // Load the project.flexmi EMF model
-        ant.'epsilon.emf.loadModel'(name: 'M', modelfile: 'project.flexmi', metamodelfile: 'pdl.emf')
+    // Validate it with pdl.evl
+    ant.'epsilon.evl'(src: 'pdl.evl'){ model(ref: 'M') }
 
-        // Validate it with pdl.evl
-        ant.'epsilon.evl'(src: 'pdl.evl'){ model(ref: 'M') }
-
-        // Run pdl.egx against it
-        ant.'epsilon.egl'(src: 'generator/pdl.egx'){ model(ref: 'M') }
-    }
+    // Run pdl.egx against it
+    ant.'epsilon.egl'(src: 'generator/pdl.egx'){ model(ref: 'M') }
 }
