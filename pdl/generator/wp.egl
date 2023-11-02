@@ -2,6 +2,8 @@
 [%import "tops.egl";%]
 # [%=wp.getId()%]: [%=wp.title%]
 
+**Duration:** M[%=wp.tasks.start.min()%] &rarr; M[%=wp.tasks.end.max()%]
+
 [%=out.startPreserve("<!--", "-->", "custom-content", true)%]
 [%=out.stopPreserve()%]
 

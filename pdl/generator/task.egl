@@ -2,6 +2,8 @@
 [%import "tops.egl";%]
 # [%=task.getId()%]: [%=task.title%]
 
+**Duration:** M[%=task.start%] &rarr; M[%=task.end%]
+
 [%=out.startPreserve("<!--", "-->", "custom-content", true)%]
 [%=out.stopPreserve()%]
 
