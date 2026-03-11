@@ -1,6 +1,6 @@
 <?nsuri pdl?>
 <project name="TYPHON" 
-	title="Polyglot and Hybrid Peristence Architectures for Big-Data Analytics"
+	title="Polyglot and Hybrid Persistence Architectures for Big-Data Analytics"
 	duration="36">
 	
 	<wp title="Requirements and Use Cases" leader="TOG" type="RTD">
@@ -88,7 +88,7 @@
 
 		<deliverable title="Query Languages and Meta-Query Frameworks Analysis Report" due="6" nature="R" dissemination="" partner="CWI"/>
 		<deliverable title="Hybrid Polystore Query Language (TyphonQL)" due="12" nature="R" dissemination="" partner="CWI"/>
-		<deliverable title="TyphonQL Compilers and Interpeters (Initial Version)" due="18" nature="S" dissemination="" partner="CWI"/>
+		<deliverable title="TyphonQL Compilers and Interpreters (Initial Version)" due="18" nature="S" dissemination="" partner="CWI"/>
 		<deliverable title="TyphonQL Compilers and Interpreters (Interim Version)" due="24" nature="S" dissemination="" partner="CWI"/>
 		<deliverable title="TyphonQL Compilers and Interpreters (Final Version)" due="30" nature="S" dissemination="" partner="CWI"/>
 		<deliverable title="Data Access Layer Generator" due="30" nature="S" dissemination="" partner="CWI"/>
@@ -140,7 +140,7 @@
 		<deliverable title="Hybrid Polystore Schema Evolution Methodology and Tools" due="12" nature="S" dissemination="" partner="NAMUR"/>
 		<deliverable title="Hybrid Polystore Data Migration Tools" due="18" nature="S" dissemination="" partner="NAMUR"/>
 		<deliverable title="Hybrid Polystore Query Evolution Tools" due="24" nature="S" dissemination="" partner="NAMUR"/>
-		<deliverable title="Hybrid Polystore Continous Evolution Tools" due="30" nature="S" dissemination="" partner="NAMUR"/>
+		<deliverable title="Hybrid Polystore Continuous Evolution Tools" due="30" nature="S" dissemination="" partner="NAMUR"/>
 
 	</wp>
 	
